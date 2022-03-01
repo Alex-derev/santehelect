@@ -1,0 +1,60 @@
+.promo{
+    height: 751px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: top;
+    }
+
+    &_header {
+
+            padding: 195px 0 120px 95px;
+            color: var(--color-white);
+            height: 99px;
+            font-size: 48px;
+            text-transform: uppercase;
+            line-height: 56px;
+
+    }
+
+    .checkbox {
+        margin-top: 100px;
+        margin-left: 167px;
+
+        &_item {
+            display: flex;
+            color: var(--color-white);
+            margin-bottom: 56px;
+
+            &:last-child {
+                margin-bottom: 89px;
+            }
+
+            &__img img{
+                width: 20px;
+                height: 21px;
+            }
+
+            &__text {
+                padding-left: 34px;
+            }
+        }
+    }
+
+    &_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 0 0 167px;
+        width: 253px;
+        height: 62px;
+        background: #E2BA00;
+        box-shadow: 5px 5px 0px #61697A;
+        
+    }
+
+}
