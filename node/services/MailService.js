@@ -2,16 +2,23 @@ const nodemailer = require('nodemailer');
 
 /**
  * Сервис для отправки сообщений
- *
- * @type {{getTransporter: (function(): *), sendMail: (function(*): Promise<void>|*)}}
+ * @class MailService
  */
-const mailService = {
+class MailService {
+    constructor() {
+        /**
+         * @protected
+         * @type {*}
+         */
+        this.transporter = this.getTransporter();
+    }
+
     /**
      * Конфигурация SMTP
      *
-     * @returns {*}
+     * @returns {nodemailer.Transporter}
      */
-    getTransporter: () => {
+    getTransporter() {
         return nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -19,7 +26,7 @@ const mailService = {
                 pass: process.env.GMAIL_PASSWORD,
             },
         });
-    },
+    }
 
     /**
      * Отправка почтового сообщения
@@ -27,9 +34,9 @@ const mailService = {
      * @param data
      * @returns {*}
      */
-    sendMail: data => {
-        return mailService.getTransporter().sendMail(data);
+    sendMail(data) {
+        return this.transporter.sendMail(data);
     }
 }
 
-module.exports = mailService;
+module.exports = new MailService();
