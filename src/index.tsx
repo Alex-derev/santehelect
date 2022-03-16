@@ -10,10 +10,8 @@ import './scss/index.scss';
 
 
 ReactDOM.render(
-  <React.StrictMode>
       <Router>
           <Application />
-      </Router>
-  </React.StrictMode>,
+      </Router>,
   document.getElementById('application')
 );

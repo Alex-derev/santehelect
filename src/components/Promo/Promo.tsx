@@ -46,7 +46,7 @@ const Promo: React.FC = () => {
                     <Button classes={['promo_button']} onClick={() => console.log(123)}>Оставить заявку</Button>
                 </div>
             </div>
-        </>
+         </>
     )
 }
 

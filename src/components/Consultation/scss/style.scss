@@ -1,0 +1,126 @@
+.consultation {
+
+    &_form {
+        width: 100%;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-column-gap: 30px;
+        grid-template-areas: 
+        'name phone'
+        'email email'
+        'button button';
+
+        label[data-type=name] {
+            grid-area: name;
+        }
+
+        label[data-type=phone] {
+            grid-area: phone;
+        }
+
+        label[data-type=email] {
+            grid-area: email;
+        }
+
+        &__button {
+            grid-area: button;
+        }
+
+        label {
+            position: relative;
+            color: var(--color-white);
+            font-size: 16px;
+            height: 40px;
+            margin-bottom: 40px;
+
+            &::after {
+                content: '';
+                height: 2px;
+                width: 0;
+                background: var(--color-white);
+                transition: .3s ease;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            &.focus::after {
+                width: 100%;
+            }
+
+            span {
+                position: absolute;
+                top: 15px;
+                left: 10px;
+                pointer-events: none;
+                transition: .3s ease;
+            }
+
+            input {
+                padding: 0 10px;
+                font-size: 16px;
+                background: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+                color: var(--color-white);
+
+            }
+
+            &.focus span {
+                top: -20px;
+                left: -2px;
+                font-size: 12px;
+            }
+
+            &.error {
+                input {
+                    border-bottom-color: red;
+                }
+                &::after {
+                    background: red;
+                }
+
+                span {
+                    color: red;
+                }
+
+            }
+        }
+
+        &__button {
+            max-width: 850px;
+            height: 70px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            button {
+                height: 100%;
+                width: 100%;
+                background: var(--color-primary);
+                border: none;
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+
+                &:hover ~ span {
+                    transform: translate(5px, 5px);
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: #61697A;
+                transform: translate(0, 0);
+                z-index: 1;
+                transition: .3s ease;
+            }
+        }
+    }
+}

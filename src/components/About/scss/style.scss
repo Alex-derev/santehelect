@@ -1,0 +1,19 @@
+.about {
+
+    &_left {
+        color: white;
+        font-size: 18px;
+        line-height: 28.8px;
+        width: 600px;
+    }
+
+    &_descr__main {
+        margin-bottom: 41px;
+        font-family: Roboto;
+    }
+    
+    &_descr {
+        font-weight: 300;
+        font-family: Roboto;
+    }
+}
