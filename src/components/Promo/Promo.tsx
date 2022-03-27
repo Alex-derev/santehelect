@@ -10,7 +10,7 @@ import checkbox from './public/icons/checkbox.svg';
 const Promo: React.FC = () => {
     return (
         <>
-            <div className="promo">
+            <div id = "main"className="promo">
                 <img src={backgroundHeader} alt="" />
                 <div className="container">
                     <h1 className="promo_header">
@@ -43,7 +43,10 @@ const Promo: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="promo_button__wrapper">
                     <Button classes={['promo_button']} onClick={() => console.log(123)}>Оставить заявку</Button>
+                    <span></span>
+                    </div>
                 </div>
             </div>
          </>

@@ -10,7 +10,25 @@
 
     &_item {
         position: relative;
-        height: 490px; 
+        height: 490px;
+
+        &:hover {
+            .services_descr {
+                &__main {
+                    transition: .3s ease;
+                }
+
+                span {
+                    color: var(--color-white);
+                }
+
+                img {
+                    position: relative;
+                    transform: translateX(10px);
+                    transition: .3s ease;
+                }
+            }
+        }
 
         &__background {
             width: 450px;

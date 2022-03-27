@@ -1,3 +1,5 @@
+@import '../../../scss/vars.scss';
+
 .consultation {
 
     &_form {
@@ -10,15 +12,15 @@
         'email email'
         'button button';
 
-        label[data-type=name] {
+        .form_name {
             grid-area: name;
         }
 
-        label[data-type=phone] {
+        .form_phone {
             grid-area: phone;
         }
 
-        label[data-type=email] {
+        .form_email {
             grid-area: email;
         }
 
@@ -27,11 +29,11 @@
         }
 
         label {
+            display: block;
             position: relative;
             color: var(--color-white);
             font-size: 16px;
             height: 40px;
-            margin-bottom: 40px;
 
             &::after {
                 content: '';
@@ -76,17 +78,21 @@
 
             &.error {
                 input {
-                    border-bottom-color: red;
+                    border-bottom-color: #ff4040;
                 }
                 &::after {
-                    background: red;
+                    background: #ff4040;
                 }
 
                 span {
-                    color: red;
+                    color: #ff4040;
                 }
 
             }
+        }
+
+        label ~ .error {
+            color: #ff4040; 
         }
 
         &__button {
@@ -104,9 +110,19 @@
                 position: relative;
                 z-index: 2;
                 cursor: pointer;
+                font-family: $font-secondary;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--color-white);
+                font-size: 20px;
 
                 &:hover ~ span {
                     transform: translate(5px, 5px);
+                }
+
+                &:hover {
+                    font-size: 21px;
+                    transition: .3s ease;
                 }
             }
 
@@ -119,7 +135,7 @@
                 background: #61697A;
                 transform: translate(0, 0);
                 z-index: 1;
-                transition: .3s ease;
+                transition: .2s ease;
             }
         }
     }

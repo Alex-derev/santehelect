@@ -11,9 +11,9 @@ interface PropTypes {
 
 const Button: React.FC<PropTypes> = ({children, classes = [], onClick}) => {
     return (
-        <div className={classNames('button', ...classes)} onClick={onClick}>
-            {children}
-        </div>
+        <button  type="submit" className={classNames('button', ...classes)} onClick={onClick}>
+            <span>{children}</span>
+        </button>
     )
 }
 

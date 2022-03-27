@@ -5,6 +5,7 @@ import './scss/style.scss';
 const Principles: React.FC = () => {
   return (
     <Section
+    id={''}
     classes={{
         classesSection: ['principles'],
         classesTitle: [''],

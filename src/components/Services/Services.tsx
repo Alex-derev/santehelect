@@ -49,6 +49,7 @@ const servicesData = [
 const Services: React.FC = () => {
  	return (
 		<Section
+			id={'services'}
 			classes={{
 				classesSection: ['services'],
 				classesTitle: [''],

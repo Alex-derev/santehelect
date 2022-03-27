@@ -6,7 +6,8 @@ import './scss/style.scss';
 
 const About: React.FC = () => {
     return (
-        <Section 
+        <Section
+            id={'about'}
             classes={{
                 classesSection: ['about'],
                 classesTitle: [''],

@@ -17,7 +17,8 @@
         align-items: center;
      }
 
-    &_logo {
+    
+     &_logo {
         width: 200px;
         margin-bottom: 21px;
     }
@@ -41,6 +42,14 @@
                 align-items: center;
                 color: var(--color-white);
                 font-size: 12px;
+
+                a{
+                    color: var(--color-white);
+
+                    &:hover {
+                        color: #ff4040;
+                    }
+                }
             }
         }
 
@@ -50,10 +59,19 @@
             height: 42px;
             margin: 0 92px 0 45px;
             border: 2px solid var(--color-primary);
-            box-shadow: 5px 5px 0 -2px #fff, 5px 5px 0px #656e7d;
+            // box-shadow: 5px 5px 0 -2px #fff, 5px 5px 0px #656e7d;
             color: var(--color-white);
             font-size: 16px;
+            font-weight: 700;
             text-transform: uppercase;
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 5px 5px 0 -2px 	#000000, 5px 5px 0px #656e7d;
+                font-size: 17px;
+                transition: .3s ease;
+            }
         }
     }
 }

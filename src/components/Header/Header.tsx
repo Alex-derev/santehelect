@@ -14,11 +14,11 @@ const Header: React.FC = () => {
                     <div className="menu_right">
                         <nav>
                             <ul className="menu">
-                                <li className="menu_item">Главная</li>
-                                <li className="menu_item">О нас</li>
-                                <li className="menu_item">Услуги</li>
-                                <li className="menu_item">Отзывы</li>
-                                <li className="menu_item">Контакты</li>
+                                <li className="menu_item"><a href="#main">Главная</a></li>
+                                <li className="menu_item"><a href="#about">О нас</a></li>
+                                <li className="menu_item"><a href="#services">Услуги</a></li>
+                                <li className="menu_item"><a href="#reviews">Отзывы</a></li>
+                                <li className="menu_item"><a href="#footer">Контакты</a></li>
                             </ul>
                         </nav>
                         <Button classes={['button_nav']} onClick={() => {}}>Обратный звонок</Button>
