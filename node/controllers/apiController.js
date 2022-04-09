@@ -1,6 +1,6 @@
 const mailService = require('../services/MailService');
 
-class serverController {
+class apiController {
     async sendMail(req, res) {
         try {
             const result = await mailService.sendMail({
@@ -18,4 +18,4 @@ class serverController {
     }
 }
 
-module.exports = new serverController();
+module.exports = new apiController();
