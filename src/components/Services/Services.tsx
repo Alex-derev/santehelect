@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+  } from "react-router-dom";
 
 import Section from '../@Section/Section';
 import ServicesItem from '../Services/@ServicesItem/ServicesItem';
@@ -17,31 +22,31 @@ const servicesData = [
 		id: 0,
 		title: 'Монтаж систем отопления',
 		imgSrc: service_1,
-		url: ''
+		url: '/service_1'
 	},
 	{
 		id: 1,
 		title: 'Монтаж дренажных систем',
 		imgSrc: service_2,
-		url: ''
+		url: '/service_2'
 	},
 	{
 		id: 2,
 		title: 'Монтаж систем водоснабжения ',
 		imgSrc: service_3,
-		url: ''
+		url: 'service_3'
 	},
 	{
 		id: 3,
 		title: 'Монтаж систем канализации',
 		imgSrc: service_4,
-		url: ''
+		url: 'service_4'
 	},
 	{
 		id: 4,
 		title: 'Электромонтажные работы',
 		imgSrc: service_5,
-		url: ''
+		url: 'service_5'
 	}
 ];
 
