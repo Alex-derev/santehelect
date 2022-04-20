@@ -16,15 +16,9 @@ export interface validationResponseInterface {
     value: string
 }
 
-/**
- * @class ValidationService
- */
 class ValidationService {
     private readonly types;
 
-    /**
-     * @constructor
-     */
     constructor() {
         this.validateName  = this.validateName.bind(this);
         this.validateEmail = this.validateEmail.bind(this);
@@ -37,25 +31,10 @@ class ValidationService {
         };
     }
 
-    /**
-     * @public
-     * @method validate
-     * @this ValidationService
-     * @param {string} type
-     * @param {string} value
-     * @returns {function}
-     */
     public validate(type: validateTypes, value: string) {
         return this.types[type](value);
     }
 
-    /**
-     * @private
-     * @method validateName
-     * @this ValidationService
-     * @param {string} value
-     * @returns {object}
-     */
     private validateName(value: string): validationResponseInterface {
         const errors: string[] = [];
         let isValid: boolean = true;
@@ -76,13 +55,6 @@ class ValidationService {
         return this.createValidateResponse(isValid, errors, value);
     }
 
-    /**
-     * @private
-     * @method validateEmail
-     * @this ValidationService
-     * @param {string} value
-     * @returns {object}
-     */
     private validateEmail(value: string): validationResponseInterface {
         const errors: string[] = [];
 
@@ -99,13 +71,6 @@ class ValidationService {
         return this.createValidateResponse(test, errors, value);
     }
 
-    /**
-     * @private
-     * @method validatePhone
-     * @this ValidationService
-     * @param {string} value
-     * @returns {object}
-     */
     private validatePhone(value: string): validationResponseInterface {
         const errors: string[] = [];
 
@@ -122,26 +87,10 @@ class ValidationService {
         return this.createValidateResponse(test, errors, value);
     }
 
-    /**
-     * @public
-     * @method isEmptyValue
-     * @this ValidationService
-     * @param {string} value
-     * @returns {boolean}
-     */
     public isEmptyValue(value: string): boolean {
         return value === '';
     }
 
-    /**
-     * @protected
-     * @method createValidateResponse
-     * @this ValidationService
-     * @param {boolean} isValid
-     * @param {array} errors
-     * @param {string} value
-     * @returns {object}
-     */
     protected createValidateResponse(isValid: boolean, errors: string[], value: string): validationResponseInterface {
         return {
             isValid,

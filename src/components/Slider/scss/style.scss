@@ -1,0 +1,120 @@
+@import '../../../scss/vars.scss';
+
+.slider {
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    &_item {
+        width: 460px;
+        height: 575px;
+        margin: 0 auto 115px auto;
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            margin-bottom: 55px;
+        }
+
+        &__dot {
+            width: 10px;
+            height: 10px;
+            background-color:  #E2BA00;
+            border-radius: 0;
+            border: none;
+            margin-right: 10px;
+
+            &:hover {
+                border: 2px solid var(--color-white);
+            }
+
+        }
+    }
+
+    &_back {
+        border: none;
+        background: none;
+        margin-right: 10px;
+
+        &:hover {
+            position: relative;
+            transform: translateX(-5px);
+        }
+    }
+
+    &_next {
+        border: none;
+        background: none;
+
+        &:hover {
+            position: relative;
+            transform: translateX(5px);
+        }
+    }
+
+    &_button__wrapper {
+        max-width: 253px;
+        height: 62px;
+        width: 100%;
+        position: relative;
+
+
+        button {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;      
+            background: #E2BA00;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {         
+                width: min-content;
+                height: min-content;   
+                transition: .3s ease;
+                font-family: $font-secondary;
+                font-weight: 700;
+                color: var(--color-white);
+                text-transform: uppercase;
+                font-size: 18px;
+                background: transparent;
+                white-space: nowrap;
+                position: relative;
+
+            }
+
+
+            &:hover ~ span {
+                transform: translate(5px, 5px);
+            }
+
+            &:hover span {
+                font-size: 19px;
+                transform: scale(1.1);
+                // transition: .3s ease;
+            }
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #61697A;
+            transform: translate(0, 0);
+            z-index: 1;
+            transition: .3s ease;
+        }
+    }
+}

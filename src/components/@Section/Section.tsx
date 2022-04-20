@@ -13,7 +13,7 @@ interface PropTypes {
     children: React.ReactChild
     classes: typeof classes
     title: string
-    id: string
+    id?: string
 }
 
 const Section: React.FC<PropTypes> = ({children, classes, title, id}) => {

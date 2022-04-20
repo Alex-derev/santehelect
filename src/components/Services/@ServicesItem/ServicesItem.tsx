@@ -12,7 +12,7 @@ interface PropTypes {
 
 const ServicesItem: React.FC<PropTypes> = ({title, imgSrc, url}) => {
     return (
-        <Link to={url} className="services_item">
+        <Link to={`/service${url}`} className="services_item">
             <img className="services_item__background" src={imgSrc}/>
             <div className="services_descr">
                 <div className="services_descr__main">{title}</div>

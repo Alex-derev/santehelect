@@ -3,7 +3,7 @@ const cors    = require('cors');
 const path    = require('path');
 
 const mainRoute   = require('./routes/mainRoute');
-const serverRoute = require('./routes/serverRoute');
+const apiRoute = require('./routes/apiRoute');
 
 const app = express();
 
@@ -12,11 +12,13 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json());
+// app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(cors());
-app.use(express.static('../public'))
+app.use(express.static('public'));
 
 app.use('/', mainRoute);
-app.use('/server', serverRoute);
+app.use('/api', apiRoute);
 
 const PORT = process.env.PORT || 5001;
 
