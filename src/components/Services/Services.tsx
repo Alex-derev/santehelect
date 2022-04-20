@@ -64,7 +64,7 @@ const Services: React.FC = () => {
 			>
 				<>
 					{servicesData.map(item => <ServicesItem key={item.id} title={item.title} imgSrc={item.imgSrc} url={item.url} />)}
-
+					
 				</>   
 		</Section>
 	)

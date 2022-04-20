@@ -31,7 +31,7 @@ export default Application;
 
 
 
-
+// axios   форматы хэширования
 //1. При инициализации приложения проверяем есть ли в localStorage ключ servicePages
     // 1.1 Создать обработчик обращений к localStorage в котором будет метод checkServicePages в котором будет проверка если по ключу servicePages в localStorage ничего не будет то мы делаем запрос на back get-initial-state после этого записфваем в localStorage данные которые пришли и нихрена не возвращаемю
 // 1.1.1 Дальше должен быть метод getServicePages в котором будет вызов метод checkServicePages и возврат данных по ключу ServicePages.
