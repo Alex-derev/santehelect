@@ -1,26 +1,31 @@
 import React from 'react';
-import './scss/style.scss';
+
 import Section from '../@Section/Section';
 
-const Descr: React.FC = () => {
-return (
-    <Section
-        classes={{
-            classesSection: ['descr'],
-            classesTitle: [''],
-            classesWrapper: ['descr_wrapper'],
-        }}
-    title='Монтаж систем отопления'
-    >
-        <>
-            <span>Работаем с объектами любого масштаба: от частных домов, автомоек и гостиниц, до гипермаркетов, государственных учреждений и коттеджных поселков.</span>
-            <div className="descr_text">
-                Осуществляем профессиональный монтаж индивидуального отопления. Мы имеем 10-ти летний опыт в сфере проектирования и внедрения отопительного оборудования на различных типах объектов.
-                Мы постоянно изучаем ассортимент отопительного оборудования, что позволяет профессионально проектировать, комплектовать и устанавливать системы отопления различной мощности. Мы работаем со всеми основными поставщиками отопительного оборудования и материалов, и комплектуем системы отопления идеальные по соотношению цена-качество.
-            </div>
-        </>
-    </Section>
-)
+import { serviceDataInterface } from '../../pages/Heating';
+
+import './scss/style.scss';
+
+interface PropTypes {
+    serviceData: serviceDataInterface
+}
+
+const Descr: React.FC<PropTypes> = ({ serviceData }) => {
+    return (
+        <Section
+            classes={{
+                classesSection: ['descr'],
+                classesTitle: [''],
+                classesWrapper: ['descr_wrapper'],
+            }}
+        title={serviceData.h1}
+        >
+            <>
+                <span>{serviceData.primaryText}</span>
+                <div className="descr_text">{serviceData.secondaryText}</div>
+            </>
+        </Section>
+    )
 }
 
 export default Descr;

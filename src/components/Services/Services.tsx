@@ -1,10 +1,4 @@
 import React from 'react';
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link
-  } from "react-router-dom";
 
 import Section from '../@Section/Section';
 import ServicesItem from '../Services/@ServicesItem/ServicesItem';
@@ -22,13 +16,13 @@ const servicesData = [
 		id: 0,
 		title: 'Монтаж систем отопления',
 		imgSrc: service_1,
-		url: '/service_1'
+		url: 'service_1'
 	},
 	{
 		id: 1,
 		title: 'Монтаж дренажных систем',
 		imgSrc: service_2,
-		url: '/service_2'
+		url: 'service_2'
 	},
 	{
 		id: 2,
@@ -64,7 +58,6 @@ const Services: React.FC = () => {
 			>
 				<>
 					{servicesData.map(item => <ServicesItem key={item.id} title={item.title} imgSrc={item.imgSrc} url={item.url} />)}
-					
 				</>   
 		</Section>
 	)
