@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -10,9 +10,14 @@ import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 import Heating from './pages/Heating';
+import servicePagesService from "./services/ServicePagesService";
 
 
 const Application: React.FC = () => {
+
+    useEffect(() => {
+        servicePagesService.setServicePages();
+    }, []);
 
     return (
         <>
