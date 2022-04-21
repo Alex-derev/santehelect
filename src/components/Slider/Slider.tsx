@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Section from '../@Section/Section';
 import './scss/style.scss';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, Dot } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Dot} from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-import photo2 from './public/photo_2.jpg';
-import photo3 from './public/photo_3.jpg';
 import Left from './public/icons/left.svg';
 import Right from './public/icons/right.svg';
 import Button from '../@Button/Button';
+import Image from '../@Image/Image';
+
 
 
 
@@ -32,8 +32,8 @@ return (
                 className="slider_item"
             >
                 <Slider>
-                    <Slide index={0} className="slider_item"><Image src={photo2} hasMasterSpinner={true}/></Slide>
-                    <Slide index={1} className="slider_item"><Image src={photo3} hasMasterSpinner={true}/></Slide>
+                    <Slide index={0} className="slider_item"><Image hash={'0626344661ef59bed634147da436a447'}/></Slide>
+                    <Slide index={1} className="slider_item"><Image hash={'09a73c20f1272a9062bc7556a7f01d5d'}/></Slide>
                 </Slider>
                 <div className="slider_item__btn">
                     <ButtonBack className="slider_back"><img src={Left}/></ButtonBack>
