@@ -1,10 +1,8 @@
 import React, {useEffect} from 'react';
 import {
-	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link
-  } from "react-router-dom";
+  } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Home from './pages/Home';
@@ -23,11 +21,10 @@ const Application: React.FC = () => {
         <>
             <Header/>
             <Switch>
-                <Route path="/" children={<Home />} />
-                <Route path="/service/:key" children={<Heating />} />
+                <Route path="/" children={<Home />} exact={true} />
+                <Route path="/service/:key" children={<Heating />} exact={true} />
             </Switch>
             <Footer/>
-            
         </>
     );
 }
