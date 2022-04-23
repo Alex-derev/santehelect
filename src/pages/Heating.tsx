@@ -4,7 +4,7 @@ import Slider from '../components/Slider/Slider';
 
 const Heating: React.FC = () => {
     useEffect(() => {
-        servicePagesService.setServicePages();
+        ;
     }, []);
 return (
     
