@@ -1,3 +1,5 @@
+@import "media";
+
 .about {
 
     &_left {
@@ -15,5 +17,18 @@
     &_descr {
         font-weight: 300;
         font-family: Roboto;
+    }
+
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_img {
+        //display: flex;
+        //justify-content: flex-end;
+        width: 350px;
+        height: 100%;
+        //right: 0;
     }
 }

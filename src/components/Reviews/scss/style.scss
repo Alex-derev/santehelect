@@ -1,43 +1,52 @@
+@import '../../../scss/mixins/mixins.scss';
+@import "media";
+
 .reviews {
     padding: 50px 0;
-
-    .container {
-        background: rgba(43, 48, 54, 0.25);
-
-    }
-
 
     .section_title {
         margin-bottom: 60px;
     }
-
-    // &_img {
-    //     width: 670px;
-    //     height: 945px;
-    //     margin: 0 30px 0 30px;
-    // }
-
+    &_arrow {
+        cursor: pointer;
+    }
     &_wrapper {
         display: flex;
         justify-content: center;
+
     }
 
-    &_arrow {
-        &__left {
-            cursor: pointer;
+    &_slider {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
-            &:hover {
-                position: relative;
-                transform: translateX(-5px);
-            }
+        &__item {
+            width: 600px;
+            height: 760px;
+            margin-bottom: 20px;
         }
+    }
 
-        &__right {
-            cursor: pointer;
+    &_dot__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
-            &:hover {
-                position: relative;
-                transform: translateX(5px);
+    &_slide {
+        width: 600px;
+        height: 760px;
+
+        &__dot {
+            @include dot;
+
+            &[disabled] {
+                background-color:  white;
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
             }
         }
     }

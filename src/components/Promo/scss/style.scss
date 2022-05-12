@@ -1,4 +1,5 @@
 @import '../../../scss/vars.scss';
+@import 'media';
 
 .promo{
     height: 751px;
@@ -16,7 +17,6 @@
 
             padding: 195px 0 120px 95px;
             color: var(--color-white);
-            height: 99px;
             font-size: 48px;
             text-transform: uppercase;
             line-height: 56px;
@@ -68,7 +68,8 @@
             justify-content: center;
             align-items: center;
 
-            span {         
+            span {        
+                position: relative; 
                 width: min-content;
                 height: min-content;   
                 transition: .3s ease;

@@ -5,7 +5,16 @@ import Svg from './public/icons/logo.svg';
 
 import './scss/style.scss';
 
-const Header: React.FC = () => {
+interface PropTypes{
+    setModal: any
+}
+
+const Header: React.FC<PropTypes> = ({setModal}) => {
+    const handleModalClick = () => {
+        setModal((prevProps: boolean) => {
+            return !prevProps
+        })
+    }
     return (
         <>
              <header className="header">
@@ -21,7 +30,7 @@ const Header: React.FC = () => {
                                 <li className="menu_item"><a href="#footer">Контакты</a></li>
                             </ul>
                         </nav>
-                        <Button classes={['button_nav']} onClick={() => {}}>Обратный звонок</Button>
+                        <Button classes={['button_nav']} onClick={() => handleModalClick()}>Обратный звонок</Button>
                     </div>
                 </div>  
             </header>
@@ -30,3 +39,6 @@ const Header: React.FC = () => {
 }
 
 export default Header;
+
+// react dispatch 
+//react memo

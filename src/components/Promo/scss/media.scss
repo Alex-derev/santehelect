@@ -1,0 +1,41 @@
+@media (max-width: 1200px) {
+    .promo {
+        .container {
+            width: 1050px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #main {
+        height: 650px;
+    }
+    .promo {
+        .container {
+            width: 660px;
+
+            .promo_header {
+                font-size: 39px;
+                line-height: 50px;
+                padding: 165px 0 0 0;
+            }
+
+            .checkbox {
+                //margin-top: 55px;
+                margin: 55px 0 0 55px;
+
+                &_item {
+                    margin-bottom: 40px;
+
+                    &:last-child {
+                        margin-bottom: 65px;
+                    }
+                }
+            }
+
+            .promo_button__wrapper {
+                margin: 69px 0 0 55px;
+            }
+        }
+    }
+}

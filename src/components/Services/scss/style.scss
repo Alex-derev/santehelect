@@ -1,10 +1,11 @@
 @import '../../../scss/vars.scss';
+@import "media";
 
 .services {
     &_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 210px;
+        grid-column-gap: 148px;
         grid-row-gap: 150px;
     }
 
@@ -12,12 +13,13 @@
         position: relative;
         height: 490px;
 
+        &__background {
+            width: 450px;
+            height: 100%;
+        }
+
         &:hover {
             .services_descr {
-                &__main {
-                    transition: .3s ease;
-                }
-
                 span {
                     color: var(--color-white);
                 }
@@ -25,14 +27,8 @@
                 img {
                     position: relative;
                     transform: translateX(10px);
-                    transition: .3s ease;
                 }
             }
-        }
-
-        &__background {
-            width: 450px;
-            height: 100%;
         }
     }
 
@@ -84,10 +80,12 @@
                 font-size: 18px;
                 line-height: 21px;
                 color: #61697A;
+                transition: .3s ease;
             }
 
             img {
                 margin: 3px 0 0 5px;
+                transition: .3s ease;
             }
         }
 

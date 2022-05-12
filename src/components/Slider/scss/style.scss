@@ -1,5 +1,7 @@
 @import '../../../scss/vars.scss';
 
+@import '../../../scss//mixins/mixins.scss';
+
 .slider {
 
     &_wrapper {
@@ -23,12 +25,7 @@
         }
 
         &__dot {
-            width: 10px;
-            height: 10px;
-            background-color:  #E2BA00;
-            border-radius: 0;
-            border: none;
-            margin-right: 10px;
+            @include dot;
 
             &:hover {
                 border: 2px solid var(--color-white);

@@ -25,4 +25,4 @@ const ServicesItem: React.FC<PropTypes> = ({title, imgSrc, url}) => {
     )
 }
 
-export default ServicesItem
+export default ServicesItem;

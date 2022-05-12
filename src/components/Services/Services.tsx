@@ -34,21 +34,22 @@ const servicesData = [
 		id: 3,
 		title: 'Монтаж систем канализации',
 		imgSrc: service_4,
-		url: 'service_4'
+		url: 'service_4',
 	},
 	{
 		id: 4,
 		title: 'Электромонтажные работы',
 		imgSrc: service_5,
 		url: 'service_5'
+
 	}
 ];
 
-
 const Services: React.FC = () => {
+
  	return (
 		<Section
-			id={'services'}
+			id={`services`}
 			classes={{
 				classesSection: ['services'],
 				classesTitle: [''],
@@ -57,7 +58,7 @@ const Services: React.FC = () => {
 			title='Наши услуги'
 			>
 				<>
-					{servicesData.map(item => <ServicesItem key={item.id} title={item.title} imgSrc={item.imgSrc} url={item.url} />)}
+					{servicesData.map(item => <ServicesItem key={item.id} title={item.title} imgSrc={item.imgSrc} url={item.url}/>)}
 				</>   
 		</Section>
 	)

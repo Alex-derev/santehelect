@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
 	Switch,
 	Route,
@@ -9,9 +9,12 @@ import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 import Heating from './pages/Heating';
 import servicePagesService from "./services/ServicePagesService";
+import Modal from './components/@Modal/Modal';
 
 
 const Application: React.FC = () => {
+
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
         servicePagesService.setServicePages();
@@ -19,12 +22,13 @@ const Application: React.FC = () => {
 
     return (
         <>
-            <Header/>
+            <Header setModal={setModal}/>
             <Switch>
                 <Route path="/" children={<Home />} exact={true} />
                 <Route path="/service/:key" children={<Heating />} exact={true} />
             </Switch>
             <Footer/>
+            {modal && <Modal onClose={() => setModal(false)}/>}
         </>
     );
 }

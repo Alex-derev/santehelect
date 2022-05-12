@@ -1,8 +1,10 @@
 @import '../../../scss/vars.scss';
+@import "media";
 
 .consultation {
 
     &_form {
+        margin-top: 50px;
         width: 100%;
         display: grid;
         grid-row-gap: 10px;
@@ -34,6 +36,7 @@
             color: var(--color-white);
             font-size: 16px;
             height: 40px;
+            margin-top: 40px;
 
             &::after {
                 content: '';
@@ -96,11 +99,12 @@
         }
 
         &__button {
-            max-width: 850px;
+            max-width: 650px;
             height: 70px;
             margin: 0 auto;
             position: relative;
             width: 100%;
+            margin-top: 90px;
 
             button {
                 height: 100%;

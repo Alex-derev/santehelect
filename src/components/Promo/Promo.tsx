@@ -7,11 +7,21 @@ import './scss/style.scss';
 import backgroundHeader from './public/img/background-header.png';
 import checkbox from './public/icons/checkbox.svg';
 
-const Promo: React.FC = () => {
+interface PropTypes {
+    setModal: any
+}
+
+const Promo: React.FC<PropTypes> = ({setModal}) => {
+    const handleModalClick = () => {
+        setModal((prevProps: boolean) => {
+            return !prevProps;
+        })
+    }
+
     return (
         <>
-            <div id = "main"className="promo">
-                <img src={backgroundHeader} alt="" />
+            <div id = "main" className="promo">
+                <img className="promo_background" src={backgroundHeader} alt="" />
                 <div className="container">
                     <h1 className="promo_header">
                         Электромонтажные и <br/>сантехнические работы в Минске
@@ -25,7 +35,6 @@ const Promo: React.FC = () => {
                                 Выезд, замер и смета бесплатно
                             </div>
                         </div>
-
                         <div className="checkbox_item">
                             <div className="checkbox_item__img">
                                 <img src={checkbox} alt="checkbox"/>
@@ -44,7 +53,7 @@ const Promo: React.FC = () => {
                         </div>
                     </div>
                     <div className="promo_button__wrapper">
-                    <Button classes={['promo_button']} onClick={() => console.log(123)}>Оставить заявку</Button>
+                    <Button classes={['promo_button']} onClick={() => handleModalClick()}>Оставить заявку</Button>
                     <span></span>
                     </div>
                 </div>

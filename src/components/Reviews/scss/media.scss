@@ -1,0 +1,24 @@
+@media (max-width: 1200px) {
+    .reviews {
+        .container {
+            width: 1050px;
+        }
+
+        &_wrapper {
+            .reviews_slider {
+                &__item {
+                    height: 720px;
+                    width: 560px;
+                }
+            }
+        }
+
+        //&_slider {
+        //
+        //    &__item {
+        //        height: 560px;
+        //        width: 720px;
+        //    }
+        //}
+    }
+}

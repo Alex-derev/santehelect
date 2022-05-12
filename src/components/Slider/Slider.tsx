@@ -16,6 +16,7 @@ interface PropTypes {
 }
 
 const Sliders: React.FC<PropTypes> = ({ serviceData }) => {
+
     return (
         <Section
             classes={{
@@ -33,7 +34,7 @@ const Sliders: React.FC<PropTypes> = ({ serviceData }) => {
                     className="slider_item"
                 >
                     <Slider>
-                        {serviceData.images.map((hash, key)=> (<Slide key={hash} index={key} className="slider_item"><Image hash={hash} /></Slide>))}
+                        {serviceData.images.map((hash, key)=> (<Slide key={hash} index={key} className="slider_item__carousel"><Image hash={hash} /></Slide>))}
                     </Slider>
                     <div className="slider_item__btn">
                         <ButtonBack className="slider_back"><img alt={''} src={Left}/></ButtonBack>
@@ -46,7 +47,6 @@ const Sliders: React.FC<PropTypes> = ({ serviceData }) => {
                     <span></span>
                 </div>
             </>
-
         </Section>
     )
 }

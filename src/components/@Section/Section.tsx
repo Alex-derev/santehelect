@@ -12,14 +12,18 @@ const classes = {
 interface PropTypes {
     children: React.ReactChild
     classes: typeof classes
-    title: string
+    title?: string
+    principlesTitle?: string
     id?: string
+    img?: string
 }
 
-const Section: React.FC<PropTypes> = ({children, classes, title, id}) => {
+const Section: React.FC<PropTypes> = ({children, classes, title, id, img, principlesTitle}) => {
     return (
         <section id={(id)} className={classNames('section', ...classes.classesSection)}>
+            <h2>{principlesTitle}</h2>
             <div className="container">
+                <img src={img} />
                 <h2 className={classNames('section_title', ...classes.classesTitle)}>{title}</h2>
                 <div className={classNames('section_wrapper', ...classes.classesWrapper)}>
                     {children}
