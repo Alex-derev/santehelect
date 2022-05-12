@@ -1,0 +1,176 @@
+@import '../../../scss/vars.scss';
+
+// body {
+//     height: 100vh;
+//   overflow-y: hidden;
+//   padding-right: 15px; /* Avoid width reflow */
+// }
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    background-color:rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+
+    &_bg {
+        height: 100%;
+        width: 100%;
+    }
+
+    &_wrapper {
+        width: 600px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        background-color: #1B1C20;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        // z-index: 30;
+    }
+
+    &_close {
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 5%;
+        right: 3%;
+
+        &:hover {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+        }
+    }
+
+    &_form {
+        margin-top: 50px;
+        // width: 100%;
+        
+        label {
+            width: 440px;
+            display: block;
+            position: relative;
+            color: var(--color-white);
+            font-size: 16px;
+            height: 60px;
+            margin-top: 5px;
+
+            &::after {
+                content: '';
+                height: 2px;
+                width: 0;
+                background: var(--color-white);
+                transition: .3s ease;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            &.focus::after {
+                width: 100%;
+            }
+
+            &:focus {
+                margin-top: 0;
+            }
+
+            span {
+                position: absolute;
+                top: 35px;
+                left: 10px;
+                pointer-events: none;
+                transition: .3s ease;
+            }
+
+            input {
+                padding: 40px 10px 0 10px;
+                font-size: 16px;
+                background: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+                color: var(--color-white);
+            }
+
+            &.focus span {
+                top: 20px;
+                left: -2px;
+                font-size: 12px;
+            }
+
+            &.error {
+                input {
+                    border-bottom-color: #ff4040;
+                }
+                &::after {
+                    background: #ff4040;
+                }
+
+                span {
+                    color: #ff4040;
+                }
+
+            }
+        }
+
+        label ~ .error {
+            color: #ff4040; 
+        }
+
+        &__button {
+            width: 250px;
+            height: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 20px;
+
+            button {
+                height: 100%;
+                width: 100%;
+                background: var(--color-primary);
+                border: none;
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+                font-family: $font-secondary;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--color-white);
+                font-size: 18px;
+                transition: .3s ease;
+
+                &:hover ~ span {
+                    transform: translate(5px, 5px);
+                }
+
+                &:hover {
+                    font-size: 19px;
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: #61697A;
+                transform: translate(0, 0);
+                z-index: 1;
+                transition: .2s ease;
+            }
+        }
+    }
+}
