@@ -12,3 +12,9 @@
     border: none;
     margin-right: 10px;
 }
+
+@mixin media($breakpoint) {
+    @media #{$breakpoint} {
+        @content;
+    }
+}

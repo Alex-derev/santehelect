@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 @import 'vars';
-
-
+@import 'reponsive';
+@import './mixins/mixins';
 
 
 :root {
@@ -20,8 +20,28 @@
   text-decoration: none;
 }
 
-  .container {
-  width: $container;
+.container {
   margin: 0 auto;
   position: relative;
+
+  @include media($breakpoint-l-and-more) {
+    width: $container;
   }
+
+  @include media($breakpoint-m) {
+    width: $container-l;
+  }
+
+  @include media($breakpoint-s) {
+    width: $container-m;
+  }
+
+  @include media($breakpoint-x) {
+    width: $container-x;
+  }
+
+  @include media($breakpoint-xs) {
+    width: $container-xs;
+    margin: 0 25px;
+  }
+}
