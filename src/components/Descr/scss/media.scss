@@ -1,7 +1,23 @@
 @media (max-width: 1200px) {
     .descr {
         .container {
-            width: 1050px;
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .descr {
+        .container {
+            width: 720px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .descr {
+        .container {
+            width: 540px;
         }
     }
 }

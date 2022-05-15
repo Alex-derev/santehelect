@@ -1,7 +1,31 @@
 @media (max-width: 1200px) {
     .footer {
         .container {
-            width: 1050px;
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #footer {
+        display: none;
+    }
+
+    .footer {
+        .container {
+            width: 720px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .footer {
+        .container {
+            width: 540px;
         }
     }
 }

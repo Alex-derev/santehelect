@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
     .reviews {
         .container {
-            width: 1050px;
+            width: 960px;
         }
 
         &_wrapper {
@@ -20,5 +20,21 @@
         //        width: 720px;
         //    }
         //}
+    }
+}
+
+@media (max-width: 991px) {
+    .reviews {
+        .container {
+            width: 720px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews {
+        .container {
+            width: 540px;
+        }
     }
 }

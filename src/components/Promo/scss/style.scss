@@ -54,7 +54,6 @@
         width: 100%;
         position: relative;
 
-
         button {
             height: 100%;
             width: 100%;
@@ -83,7 +82,6 @@
 
             }
 
-
             &:hover ~ span {
                 transform: translate(5px, 5px);
             }
@@ -91,7 +89,6 @@
             &:hover span {
                 font-size: 19px;
                 transform: scale(1.1);
-                // transition: .3s ease;
             }
         }
 
@@ -107,5 +104,4 @@
             transition: .3s ease;
         }
     }
-
 }

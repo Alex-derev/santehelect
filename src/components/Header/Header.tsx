@@ -17,7 +17,7 @@ const Header: React.FC<PropTypes> = ({setModal}) => {
     }
     return (
         <>
-             <header className="header">
+             <header className="header" id="header">
                 <div className="container">
                     <img className="header_logo" src={Svg} alt="logo"/>                 
                     <div className="menu_right">

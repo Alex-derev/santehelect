@@ -1,7 +1,24 @@
 @media (max-width: 1200px) {
     .principles {
         .container {
-            width: 1050px;
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .principles {
+        .container {
+            width: 720px;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .principles {
+        .container {
+            width: 540px;
         }
     }
 }

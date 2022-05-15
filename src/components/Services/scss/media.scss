@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
     .services {
         .container {
-            width: 1050px;
+            width: 960px;
         }
 
         &_descr {
@@ -38,7 +38,7 @@
 
         .container {
             top: 0;
-            width: 660px;
+            width: 720px;
 
             .services_wrapper {
                 grid-column-gap: 0;
@@ -48,11 +48,11 @@
             .services_item:nth-child(2){
                 margin-top: 420px;
                 position: relative;
-                left: -57px;
+                left: 1px;
             }
             .services_item:nth-child(4) {
                 position: relative;
-                left: -57px;
+                left: 1px;
             }
 
             .services_item:nth-child(3),
@@ -75,6 +75,14 @@
                     width: 358px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .services {
+        .container {
+            width: 540px;
         }
     }
 }
