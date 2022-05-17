@@ -1,8 +1,9 @@
 @import '../../../scss/vars.scss';
-//@import 'media';
+@import '../../../scss/_reponsive.scss';
+@import '../../../scss/mixins/mixins.scss';
 
 .promo{
-    height: 751px;
+    padding-bottom: 50px;
     position: relative;
 
     img {
@@ -15,7 +16,7 @@
 
     &_header {
 
-            padding: 195px 0 120px 95px;
+            padding: 195px 0 0 95px;
             color: var(--color-white);
             font-size: 48px;
             text-transform: uppercase;
@@ -102,6 +103,116 @@
             transform: translate(0, 0);
             z-index: 1;
             transition: .3s ease;
+        }
+    }
+
+    @include media($breakpoint-l-and-more) {
+
+    }
+
+    @include media($breakpoint-m) {
+
+    }
+
+    @include media($breakpoint-s) {
+        &_header {
+            font-size: 38px;
+            padding: 195px 0 0 0;
+        }
+
+        .checkbox {
+            margin: 100px 0 0 8%;
+        }
+
+        &_button__wrapper {
+            margin: 80px 0 0 8%;
+
+            button {
+                display: block;
+
+                &:hover span{
+                    font-size: 18px;
+                    transform: none;
+                }
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    @include media($breakpoint-x) {
+        &_header {
+            font-size: 34px;
+            padding: 195px 0 0 0;
+        }
+
+        .checkbox {
+            margin: 100px 0 0 8%;
+
+            &_item__text {
+                font-size: 16px;
+            }
+        }
+
+        &_button__wrapper {
+            margin: 80px 0 0 8%;
+
+            button {
+                display: block;
+
+                span {
+                    font-size: 16px;
+                }
+
+                &:hover span{
+                    font-size: 16px;
+                    transform: none;
+                }
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    @include media($breakpoint-xs) {
+        &_header {
+            font-size: 30px;
+            padding: 195px 0 0 0;
+        }
+
+        .checkbox {
+            margin: 100px 0 0 8%;
+
+            &_item__text {
+                font-size: 14px;
+            }
+        }
+
+        &_button__wrapper {
+            margin: 80px 0 0 8%;
+            max-width: 240px;
+            height: 58px;
+
+            button {
+                display: block;
+
+                span {
+                    font-size: 15px;
+                }
+
+                &:hover span{
+                    font-size: 15px;
+                    transform: none;
+                }
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
         }
     }
 }

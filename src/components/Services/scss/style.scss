@@ -163,7 +163,10 @@
     }
 
     @include media($breakpoint-x) {
-        
+        h2 {
+            font-size: 30px;
+        }
+
         &_wrapper {
             display: flex;
             flex-direction: column;

@@ -42,6 +42,6 @@
 
   @include media($breakpoint-xs) {
     width: $container-xs;
-    margin: 0 25px;
+    padding: 0 10px;
   }
 }
