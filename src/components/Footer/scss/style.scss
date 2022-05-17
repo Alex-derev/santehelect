@@ -1,8 +1,8 @@
 @import '../../../scss/vars.scss';
-@import "media";
+@import '../../../scss/mixins/mixins.scss';
+@import '../../../scss/_reponsive.scss';
 
 .footer {
-    height: 320px;
     background: rgba(43, 48, 54, 1);
     padding: 50px 0 155px 0;
 
@@ -67,4 +67,23 @@
         }
     }
 
+    @include media($breakpoint-l-and-more) {
+
+    }
+
+    @include media($breakpoint-m) {
+
+    }
+
+    @include media($breakpoint-s) {
+        display: none;
+    }
+
+    @include media($breakpoint-x) {
+        display: none;
+    }
+
+    @include media($breakpoint-xs) {
+
+    }
 }

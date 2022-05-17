@@ -1,7 +1,11 @@
 @import '../../../scss/vars.scss';
-@import "media";
+@import '../../../scss/mixins/mixins.scss';
+@import '../../../scss/_reponsive.scss';
 
 .consultation {
+    h2:first-child {
+        display: none;
+    }
 
     &_form {
         margin-top: 50px;
@@ -119,6 +123,7 @@
                 text-transform: uppercase;
                 color: var(--color-white);
                 font-size: 20px;
+                transition: .3s ease;
 
                 &:hover ~ span {
                     transform: translate(5px, 5px);
@@ -126,7 +131,7 @@
 
                 &:hover {
                     font-size: 21px;
-                    transition: .3s ease;
+
                 }
             }
 
@@ -141,6 +146,123 @@
                 z-index: 1;
                 transition: .2s ease;
             }
+        }
+    }
+
+    @include media($breakpoint-l-and-more) {
+
+    }
+
+    @include media($breakpoint-m) {
+        &_form__button {
+        max-width: 430px;
+        }
+    }
+
+    @include media($breakpoint-s) {
+        &_form__button {
+            max-width: 250px;
+            height: 60px;
+
+            span{
+                display: none;
+            }
+
+            button {
+                font-size: 18px;
+
+                &:hover {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &_form {
+            grid-template-areas:
+        'name name'
+        'phone phone'
+        'email email'
+        'button button';
+        }
+    }
+
+    @include media($breakpoint-x) {
+        h2 {
+            font-size: 30px;
+        }
+        &_form__button {
+            max-width: 380px;
+            font-size: 18px;
+        }
+
+        &_form {
+            grid-template-areas:
+            'name name'
+            'phone phone'
+            'email email'
+            'button button';
+
+            &__button {
+                max-width: 250px;
+                height: 60px;
+
+                button {
+                    font-size: 18px;
+
+                    &:hover {
+                        font-size: 18px;
+                    }
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    @include media($breakpoint-xs) {
+        .container {
+            h2 {
+                font-size: 28px;
+            }
+        }
+        .section_title {
+            font-size: 30px;
+        }
+
+        &_form__button {
+            max-width: 230px;
+            height: 55px;
+
+            button {
+                font-size: 16px;
+
+                &:hover {
+                    font-size: 16px;
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        &_form {
+            grid-template-areas:
+        'name name'
+        'phone phone'
+        'email email'
+        'button button';
+        }
+
+        label {
+            font-size: 14px;
         }
     }
 }
