@@ -74,6 +74,10 @@
         }
     }
 
+    .burg {
+        display: none;
+    }
+
     @include media($breakpoint-l-and-more) {
 
     }
@@ -89,22 +93,70 @@
 
     @include media($breakpoint-s) {
         .menu_right {
-            display: none;
+            .menu {
+                display: none;
+            }
             .button_nav {
                 display: none;
             }
 
-            .menu_item {
-                //font-size: 10px;
+            .burg {
+                display: block;
+                //flex-direction: column;
+
+                &_item {
+                    width: 45px;
+                    height: 5px;
+                    background-color: #FFFFFF;
+                    margin-bottom: 8px;
+                }
             }
         }
     }
 
     @include media($breakpoint-x) {
-        display: none;
+        .menu_right {
+            .menu {
+                display: none;
+            }
+            .button_nav {
+                display: none;
+            }
+
+            .burg {
+                display: block;
+
+                &_item {
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FFFFFF;
+                    margin-bottom: 7px;
+                }
+            }
+        }
     }
 
     @include media($breakpoint-xs) {
+        width: 100%;
 
+        .menu_right {
+            .menu {
+                display: none;
+            }
+            .button_nav {
+                display: none;
+            }
+
+            .burg {
+                display: block;
+
+                &_item {
+                    width: 40px;
+                    height: 4px;
+                    background-color: #FFFFFF;
+                    margin-bottom: 7px;
+                }
+            }
+        }
     }
 }

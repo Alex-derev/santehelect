@@ -1,5 +1,7 @@
 import React from 'react';
+
 import './scss/style.scss';
+
 import Facebook from './public/icons/Facebook.svg';
 import Instagram from './public/icons/Instagram.svg';
 
@@ -18,21 +20,21 @@ const Footer: React.FC = () => {
                 <div className="footer_menu">
                     <div className="footer_menu__wrapper">
                         <div className="footer_menu__item footer_menu__title">Меню</div>
-                        <div className="footer_menu__item">Наши услуги</div>
-                        <div className="footer_menu__item">О нас</div>
-                        <div className="footer_menu__item">Наши принципы</div>
+                        <a href="/" className="footer_menu__item">Наши услуги</a>
+                        <a href="/" className="footer_menu__item">О нас</a>
+                        <a href="/" className="footer_menu__item">Наши принципы</a>
                     </div>
                     <div className="footer_menu__wrapper">
                         <div className="footer_menu__item footer_menu__title">Клиентам</div>
-                        <div className="footer_menu__item">Заказать консультацию</div>
-                        <div className="footer_menu__item">Расчет сметы</div>
-                        <div className="footer_menu__item">Акции</div>
+                        <a href="/" className="footer_menu__item">Заказать консультацию</a>
+                        <a href="/" className="footer_menu__item">Расчет сметы</a>
+                        <a href="/" className="footer_menu__item">Акции</a>
                     </div>
                     <div className="footer_menu__wrapper">
                         <div className="footer_menu__item footer_menu__title">Документы</div>
-                        <div className="footer_menu__item">Политика конфиденциальности</div>
-                        <div className="footer_menu__item">Обработка персональных данных</div>
-                        <div className="footer_menu__item">Публичная оферта</div>
+                        <a href="/" className="footer_menu__item">Политика конфиденциальности</a>
+                        <a href="/" className="footer_menu__item">Обработка персональных данных</a>
+                        <a href="/" className="footer_menu__item">Публичная оферта</a>
                     </div>
                 </div>
             </div>

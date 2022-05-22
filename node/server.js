@@ -7,7 +7,7 @@ const apiRoute = require('./routes/apiRoute');
 
 const app = express();
 
-app.enable('view cache');
+// app.enable('view cache');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 

@@ -1,10 +1,12 @@
 @import '../../../scss/vars.scss';
+@import '../../../scss/mixins/mixins.scss';
+@import '../../../scss/_reponsive';
 
-// body {
-//     height: 100vh;
-//   overflow-y: hidden;
-//   padding-right: 15px; /* Avoid width reflow */
-// }
+ body {
+     //height: 100vh;
+     //overflow-y: hidden;
+     //padding-right: 15px;
+ }
 
 .modal {
     position: fixed;
@@ -35,7 +37,6 @@
         left: 50%;
         top: 50%;
         position: absolute;
-        // z-index: 30;
     }
 
     &_close {
@@ -54,7 +55,6 @@
 
     &_form {
         margin-top: 50px;
-        // width: 100%;
         
         label {
             width: 440px;
@@ -171,6 +171,51 @@
                 z-index: 1;
                 transition: .2s ease;
             }
+        }
+    }
+
+    @include media($breakpoint-l-and-more) {
+
+    }
+
+    @include media($breakpoint-m) {
+
+    }
+
+    @include media($breakpoint-s) {
+
+    }
+
+    @include media($breakpoint-x) {
+        &_wrapper {
+            width: 515px;
+        }
+
+        &_form {
+            &__button {
+                width: 230px;
+
+                span {
+                    display: none;
+                }
+
+                button {
+                    font-size: 16px;
+
+                    &:hover {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media($breakpoint-xs) {
+        //padding: 0 10px 0 10px;
+
+        &_wrapper {
+            width: 100%;
+            margin: 0 10px 0 10px;
         }
     }
 }

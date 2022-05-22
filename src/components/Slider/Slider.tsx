@@ -37,15 +37,13 @@ const Sliders: React.FC<PropTypes> = ({ serviceData }) => {
                         {serviceData.images.map((hash, key)=> (<Slide key={hash} index={key} className="slider_item__carousel"><Image hash={hash} /></Slide>))}
                     </Slider>
                     <div className="slider_item__btn">
-                        <ButtonBack className="slider_back"><img alt={''} src={Left}/></ButtonBack>
                         {Array(6).fill(0).map((val, key) => (<Dot key={key} slide={key} className="slider_item__dot"/>))}
-                        <ButtonNext className="slider_next"><img alt={''} src={Right}/></ButtonNext>
+                    </div>
+                    <div className="slider_button__wrapper">
+                        <Button classes={['slider_button']} onClick={() => {}}>Оставить заявку</Button>
+                        <span></span>
                     </div>
                 </CarouselProvider>
-                <div className="slider_button__wrapper">
-                    <Button classes={['slider_button']} onClick={() => {}}>Оставить заявку</Button>
-                    <span></span>
-                </div>
             </>
         </Section>
     )

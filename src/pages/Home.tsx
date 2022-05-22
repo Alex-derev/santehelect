@@ -20,7 +20,6 @@ const Home: React.FC = () => {
             <Principles/>
             <Reviews/>
             {modal && <Modal onClose={() => setModal(false)}/>}
-
         </>
     )
 }

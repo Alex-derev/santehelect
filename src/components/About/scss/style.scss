@@ -55,7 +55,7 @@
         }
 
         &_img {
-            width: 100%;
+            width: 570px;
         }
     }
 
@@ -77,13 +77,13 @@
         }
 
         &_img {
-            width: 100%;
+            width: 570px;
         }
     }
 
     @include media($breakpoint-xs) {
         h2 {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         &_wrapper {

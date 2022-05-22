@@ -7,11 +7,18 @@ import './scss/style.scss';
 
 interface PropTypes{
     setModal: any
+    setBurger: any
 }
 
-const Header: React.FC<PropTypes> = ({setModal}) => {
+const Header: React.FC<PropTypes> = ({setModal, setBurger}) => {
     const handleModalClick = () => {
         setModal((prevProps: boolean) => {
+            return !prevProps
+        })
+    }
+
+    const handleBurgerClick = () => {
+        setBurger((prevProps: boolean) => {
             return !prevProps
         })
     }
@@ -31,6 +38,11 @@ const Header: React.FC<PropTypes> = ({setModal}) => {
                             </ul>
                         </nav>
                         <Button classes={['button_nav']} onClick={() => handleModalClick()}>Обратный звонок</Button>
+                        <div className="burg"  onClick={() => handleBurgerClick()}>
+                            <div className="burg_item"></div>
+                            <div className="burg_item"></div>
+                            <div className="burg_item"></div>
+                        </div>
                     </div>
                 </div>  
             </header>

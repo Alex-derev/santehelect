@@ -40,6 +40,11 @@ const Modal: React.FC<PropsType> = ({onClose}) => {
             document.body.removeChild(container);
         }
     })
+
+    const body:any = document.querySelector('body');
+
+    onClose? body.style.overflowY = 'hidden': body.style.overflowY = 'auto';
+
     const [focus, setFocus]   = useState<typeof initialState>(initialState);
     const [values, setValues] = useState<typeof valuesState>(valuesState);
     const [errors, setErrors] = useState<typeof initialState>(initialState);

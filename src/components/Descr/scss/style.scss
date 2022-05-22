@@ -1,7 +1,13 @@
 @import "../../../scss/vars";
+@import '../../../scss/mixins/mixins.scss';
+@import '../../../scss/_reponsive.scss';
 
 .descr {
     padding: 220px 0 0 0!important;
+
+    h2:first-child {
+        display: none;
+    }
 
     &_wrapper {
         max-width: 600px;
@@ -26,5 +32,38 @@
         text-align: left;
         font-size: 16px;
         line-height: 160%;
+    }
+
+    @include media($breakpoint-l-and-more) {
+
+    }
+
+    @include media($breakpoint-m) {
+
+    }
+
+    @include media($breakpoint-s) {
+
+    }
+
+    @include media($breakpoint-x) {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    @include media($breakpoint-xs) {
+        h2 {
+            font-size: 28px;
+        }
+
+        span {
+            font-size: 17px;
+            width: 100%;
+        }
+
+        &_text {
+            font-size: 15px;
+        }
     }
 }
