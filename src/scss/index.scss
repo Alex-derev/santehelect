@@ -10,18 +10,24 @@
   --color-secondary: #151619;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  position: relative;
+
+}
+
 * {
   padding: 0;
   margin: 0;
-  //margin-right: calc(-1 * (100vw - 100%));
   list-style: none;
   outline: none;
   font-family: Roboto Condensed, system-ui, Tahoma, sans-serif;
   box-sizing: border-box;
   text-decoration: none;
-  //overflow-x: hidden;
-  //margin-right: calc(-1 * (100vw - 100%));
-  overflow-y: visible;
 
   @include media($breakpoint-l-and-more) {
 

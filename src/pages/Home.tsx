@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useLocation, useHistory} from "react-router-dom";
+import { History, LocationState } from "history";
 
 import Promo from '../components/Promo/Promo';
 import Services from '../components/Services/Services';
@@ -9,18 +10,30 @@ import Principles from '../components/Principles/Principles';
 import Reviews from '.././components/Reviews/Reviews';
 import Modal from '../components/@Modal/Modal';
 
-const Home: React.FC = () => {
+// interface MyComponentProps {
+//     someOfYourOwnProps: any;
+//     history: History<LocationState>;
+//     someMorePropsIfNeedIt: any;
+
+const Home: React.FC= () => {
     const [modal, setModal] = useState(false);
-    const[hash, setHash] = useState('#main');
 
-    // const history = useHistory();
-    // console.log(history);
-    const location = useLocation();
+    let locHash = () => {
+        const location = useLocation();
+        let history = useHistory();
 
-    useEffect(() => {
+        console.log(history);
+
+        history.listen((location: any) => {
         document.location.hash = location.hash;
-        // document.location.hash = '#main';
-    }, [location]);
+        })
+
+        useEffect (() => {
+            document.location.hash = '/';
+        })
+    }
+
+    locHash();
 
     return (
         <>
