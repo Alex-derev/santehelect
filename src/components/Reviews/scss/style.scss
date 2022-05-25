@@ -77,12 +77,6 @@
     }
 
     @include media($breakpoint-s) {
-        &_slide {
-            &__dot {
-                width: 15px;
-                height: 15px;
-            }
-        }
 
         &_slider__item {
             width: 570px;
@@ -91,12 +85,6 @@
     }
 
     @include media($breakpoint-x) {
-        &_slide {
-            &__dot {
-                width: 14px;
-                height: 14px;
-            }
-        }
 
         &_slider{
             width: 100%;
@@ -111,8 +99,8 @@
     @include media($breakpoint-xs) {
         &_slide {
             &__dot {
-                width: 14px;
-                height: 14px;
+                width: 15px;
+                height: 15px;
             }
         }
 

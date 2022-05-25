@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useLocation, useHistory} from "react-router-dom";
 
 import Promo from '../components/Promo/Promo';
 import Services from '../components/Services/Services';
@@ -10,6 +11,16 @@ import Modal from '../components/@Modal/Modal';
 
 const Home: React.FC = () => {
     const [modal, setModal] = useState(false);
+    const[hash, setHash] = useState('#main');
+
+    // const history = useHistory();
+    // console.log(history);
+    const location = useLocation();
+
+    useEffect(() => {
+        document.location.hash = location.hash;
+        // document.location.hash = '#main';
+    }, [location]);
 
     return (
         <>
@@ -25,3 +36,5 @@ const Home: React.FC = () => {
 }
 
 export default Home;
+
+//useLocation проверяю на хэш и скролю на него

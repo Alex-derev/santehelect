@@ -173,13 +173,19 @@
 
     @include media($breakpoint-xs) {
         h2{
+
             font-size: 28px;
-            text-align: center;
         }
 
         &_item {
             width: 100%;
             margin: 0 auto;
+            display: block;
+
+            &__dot {
+                width: 15px;
+                height: 15px;
+            }
 
         }
 

@@ -10,15 +10,14 @@
     z-index: 20;
     left: 0;
     top: 0;
-    padding: 32px 21px 0 0;
     display: flex;
     justify-content: flex-end;
     overflow-y: hidden;
 
     &_wrapper {
-        width: 60%;
+        width: 100%;
         background-color: #2B3036;
-        height: 100%;
+        height: 60%;
     }
 
     &_menu {
@@ -61,6 +60,11 @@
         }
     }
 
+    &_bg {
+        width: 100%;
+        height: 100%;
+    }
+
     @include media($breakpoint-l-and-more) {
 
     }
@@ -78,7 +82,6 @@
     }
 
     @include media($breakpoint-xs) {
-        padding: 32px 21px 0 21px;
         &_wrapper {
             width: 100%;
         }

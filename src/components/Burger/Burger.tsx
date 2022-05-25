@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {Link} from "react-router-dom";
 
 import './scss/style.scss';
 
@@ -23,22 +24,76 @@ const Burger: React.FC<PropTypes> = ({onClose, setModal}) => {
         })
     }
 
+    useEffect(() => {
+        document.body.style.overflowY = 'hidden';
+
+        return () => {
+            document.body.style.overflowY = 'scroll';
+        }
+    }, []);
+
     return (
-       <section className='burger'>
-           <div className="burger_wrapper">
-               <div className="burger_cross">
+        <section className='burger'>
+            <div className="burger_bg" onClick={onClose}></div>
+            <div className="burger_wrapper">
+                <div className="burger_cross">
                     <img src={cross} alt='/' onClick={onClose}/>
-               </div>
+                </div>
                 <div className="burger_menu">
-                    <a className="burger_menu__item" href="#main" onClick={onClose}>Главная</a>
-                    <a className="burger_menu__item" href="#about" onClick={onClose}>О нас</a>
-                    <a className="burger_menu__item" href="#services" onClick={onClose}>Услуги</a>
-                    <a className="burger_menu__item" href="#reviews" onClick={onClose}>Отзывы</a>
-                    <a className="burger_menu__item" href="#footer" onClick={onClose}>Контакты</a>
+                    <Link
+                        to={{
+                            pathname: '/',
+                            hash: '#main'
+                        }}
+                        className="burger_menu__item"
+                        onClick={onClose}
+                    >
+                        Главная
+                    </Link>
+                    <Link
+                        to={{
+                            pathname: '/',
+                            hash: '#about'
+                        }}
+                        className="burger_menu__item"
+                        onClick={onClose}
+                    >
+                        О нас
+                    </Link>
+                    <Link
+                        to={{
+                            pathname: '/',
+                            hash: '#services'
+                        }}
+                        className="burger_menu__item"
+                        onClick={onClose}
+                    >
+                        Услуги
+                    </Link>
+                    <Link
+                        to={{
+                            pathname: '/',
+                            hash: '#reviews'
+                        }}
+                        className="burger_menu__item"
+                        onClick={onClose}
+                    >
+                        Отзывы
+                    </Link>
+                    <Link
+                        to={{
+                            pathname: '/',
+                            hash: '#footer'
+                        }}
+                        className="burger_menu__item"
+                        onClick={onClose}
+                    >
+                        Контакты
+                    </Link>
                 </div>
                 <Button classes={['burger_button']} onClick={() => { handleCloseClick(); handleModalClick();}}>Оставить заявку</Button>
-           </div>
-       </section>
+            </div>
+        </section>
     )
 }
 

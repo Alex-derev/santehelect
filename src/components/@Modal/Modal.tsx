@@ -21,29 +21,27 @@ const initialState = {
 const valuesState = {
     name: '',
     phone: '',
-    email: '',
+    email: ''
 };
 
-interface PropsType {
-    onClose: any
+interface PropTypes {
+    onClose: () => void
 }   
 
 
-const Modal: React.FC<PropsType> = ({onClose}) => {
+const Modal: React.FC<PropTypes> = ({onClose}) => {
 
     const [container] = useState(() => document.createElement('div'))
 
     useEffect(() => {
         document.body.appendChild(container);
+        document.body.style.overflowY = 'hidden';
 
         return () => {
             document.body.removeChild(container);
+            document.body.style.overflowY = 'scroll';
         }
-    })
-
-    const body:any = document.querySelector('body');
-
-    onClose? body.style.overflowY = 'hidden': body.style.overflowY = 'auto';
+    }, []);
 
     const [focus, setFocus]   = useState<typeof initialState>(initialState);
     const [values, setValues] = useState<typeof valuesState>(valuesState);
@@ -71,7 +69,7 @@ const Modal: React.FC<PropsType> = ({onClose}) => {
         setFocus(prevState => {
             return {
                 ...prevState,
-                [key]: !isValid || !validationService.isEmptyValue(event.target.value),
+                [key]: !isValid || !validationService.isEmptyValue(event.target.value)
             }
         });
     };

@@ -21,7 +21,7 @@ const Sliders: React.FC<PropTypes> = ({ serviceData }) => {
         <Section
             classes={{
                 classesSection: ['slider'],
-                classesTitle: [''],
+                classesTitle: ['slider_title'],
                 classesWrapper: ['slider_wrapper'],
             }}
             title={serviceData.h2}
