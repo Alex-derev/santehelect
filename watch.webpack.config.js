@@ -3,6 +3,10 @@ const {
     CleanWebpackPlugin
 }                       = require('clean-webpack-plugin');
 const fs                = require('fs');
+const webpack           = require('webpack');
+const dotenv            = require('dotenv');
+
+dotenv.config({path: './.env.local'});
 
 
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -131,6 +135,9 @@ module.exports = {
         // new HtmlWebpackPlugin({
         //     template: path.join(__dirname, 'public', 'index.html')
         // }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(process.env)
+        })
     ],
 };
