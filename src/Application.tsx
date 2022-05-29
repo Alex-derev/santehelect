@@ -28,7 +28,7 @@ const Application: React.FC = () => {
                 <Route path="/" children={<Home />} exact={true} />
                 <Route path="/service/:key" children={<Heating />} exact={true} />
             </Switch>
-            <Footer/>
+            <Footer setModal={setModal}/>
             {modal && <Modal onClose={() => setModal(false)}/>}
             {burger && <Burger onClose={() => setBurger(false)} setModal={setModal}/>}
         </>

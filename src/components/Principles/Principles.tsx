@@ -8,7 +8,7 @@ import backgroundPrinciples from './public/img/background.png';
 const Principles: React.FC = () => {
     return (
         <Section
-        id={''}
+        id={'principles'}
         classes={{
             classesSection: ['principles'],
             classesTitle: [''],

@@ -10,27 +10,22 @@ import Principles from '../components/Principles/Principles';
 import Reviews from '.././components/Reviews/Reviews';
 import Modal from '../components/@Modal/Modal';
 
-// interface MyComponentProps {
-//     someOfYourOwnProps: any;
-//     history: History<LocationState>;
-//     someMorePropsIfNeedIt: any;
-
 const Home: React.FC= () => {
     const [modal, setModal] = useState(false);
 
     let locHash = () => {
         const location = useLocation();
-        let history = useHistory();
 
-        console.log(history);
-
-        history.listen((location: any) => {
-        document.location.hash = location.hash;
-        })
+        useEffect(() => {
+            document.location.hash = location.hash;
+        }, [location])
 
         useEffect (() => {
-            document.location.hash = '/';
-        })
+            const clearHash = () => {
+                document.location.hash = '/';
+            }
+            setTimeout(clearHash, 100);
+        }, [location]);
     }
 
     locHash();
@@ -49,5 +44,3 @@ const Home: React.FC= () => {
 }
 
 export default Home;
-
-//useLocation проверяю на хэш и скролю на него

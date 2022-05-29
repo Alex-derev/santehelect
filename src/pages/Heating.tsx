@@ -4,7 +4,8 @@ import React, {
 }               from 'react';
 import {
     useHistory,
-    useParams
+    useParams,
+    useLocation
 } from 'react-router-dom';
 
 import Descr  from '../components/Descr/Descr';
@@ -35,6 +36,7 @@ interface HeatingParams {
 const Heating: React.FC = () => {
     const params = useParams<HeatingParams>();
     const history = useHistory();
+    const location = useLocation;
     const [serviceData, setServiceData] = useState<serviceDataInterface>(initialState);
 
     useEffect(() => {
@@ -44,6 +46,12 @@ const Heating: React.FC = () => {
 
         setServiceData(servicePagesService.getServicePageByKey(params.key));
     }, []);
+
+    const setStartServices = () => {
+        document.location.hash = '#descr';
+    }
+
+    setStartServices();
 
     return (
         <>

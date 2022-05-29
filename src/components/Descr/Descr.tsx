@@ -13,6 +13,7 @@ interface PropTypes {
 const Descr: React.FC<PropTypes> = ({ serviceData }) => {
     return (
         <Section
+            id ='descr'
             classes={{
                 classesSection: ['descr'],
                 classesTitle: [''],

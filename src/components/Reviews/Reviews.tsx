@@ -12,6 +12,7 @@ import classNames           from 'classnames';
 import ArrowLeft from './public/icons/left-reviews.svg';
 import ArrowRight from './public/icons/right-reviews.svg';
 import reviewOne from './public/img/review-one.png';
+import reviewTwo from './public/img/review-two.png';
 
 const Reviews: React.FC = () => {
     return (
@@ -36,10 +37,10 @@ const Reviews: React.FC = () => {
                             <Image className="reviews_slide__img" hasMasterSpinner={true} src={reviewOne}/>
                         </Slide>
                         <Slide className="reviews_slide" index={1}>
-                            <Image className="reviews_slide__img" hasMasterSpinner={true} src={reviewOne}/>
+                            <Image className="reviews_slide__img" hasMasterSpinner={true} src={reviewTwo}/>
                         </Slide>
                         <Slide className="reviews_slide" index={2}>
-                            <Image className="reviews_slide__img" hasMasterSpinner={true} src={reviewOne}/>
+                            <Image className="reviews_slide__img" hasMasterSpinner={true} src={reviewTwo}/>
                         </Slide>
                     </Slider>
                         <div className="reviews_dot__wrapper">

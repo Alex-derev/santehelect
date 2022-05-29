@@ -32,7 +32,13 @@ const Header: React.FC<PropTypes> = ({setModal, setBurger, burger, onClose}) => 
         <>
              <header className="header" id="header">
                 <div className="container">
-                    <img className="header_logo" src={svg} alt="logo"/>
+                    <Link
+                        to={{
+                            pathname: '/'
+                        }}
+                    >
+                        <img className="header_logo" src={svg} alt="logo"/>
+                    </Link>
                     <div className="menu_right">
                         <nav>
                             <ul className="menu">
